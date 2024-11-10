@@ -1,0 +1,7 @@
+{
+    "baseURL": "https://jsonplaceholder.typicode.com",
+    "endpoints": {
+        "getUsers": "/posts",
+        "createUser": "/api/users/create"
+    }
+}

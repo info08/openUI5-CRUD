@@ -1,0 +1,111 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "ui5.walkthrough",
+    "i18n": "i18n/i18n.properties",
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "type": "application",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.108.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {}
+      }
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "ui5.crud.i18n.i18n",
+          "supportedLocales": [""],
+          "fallbackLocale": ""
+        }
+      }
+    },
+
+
+    "rootView": {
+      "viewName": "ui5.crud.view.App",
+      "type": "XML",
+      "id": "app"
+    },
+
+
+    "resources": {
+	  "css": [
+		  {
+		    "uri": "css/style.css"
+		  }
+	   ],
+     "customcontrols": {
+        "namespace": "ui5.crud.customcontrols"
+      }
+	  },
+
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "type": "View",
+        "viewType": "XML",
+        "path": "ui5/crud/view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "history": true,
+        "transition": "slide",
+        "bypassed": {
+          "target": "notFound"
+        },
+        "async": true
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "dashboard",
+          "target": "dashboard"
+        },
+        {
+          "pattern": "userdetails/{id}",
+          "name": "userdetails",
+          "target": "userdetails"
+        }
+      ],
+      "targets": {
+        "dashboard": {
+          "id": "dashboard",
+          "name": "Dashboard",
+          "viewLevel": 0
+        },
+        "userdetails": {
+          "id": "userdetails",
+          "name": "UserDetails",
+          "viewLevel": 1
+        },
+        "notFound": {
+          "id": "notFound",
+          "name": "NotFound",
+          "transition": "show"
+        }
+      }
+    },
+
+    "resourceRoots": {
+            "ui5.crud": "./"
+    }
+
+
+  }
+}
