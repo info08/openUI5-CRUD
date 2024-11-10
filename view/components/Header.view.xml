@@ -1,0 +1,42 @@
+<mvc:View
+    controllerName="ui5.crud.controller.header"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <App class="header-app">
+        <pages>
+            <Page title="Responsive Header">
+                <customHeader>
+                    <Bar>
+                        <!-- Left side (e.g., menu button) -->
+                        <contentLeft>
+                            <Button 
+                               icon="sap-icon://sap-logo-shape" 
+                               press="onMenuPress" 
+                               class="btn-header"
+                            />
+                        </contentLeft>
+                        
+                        <!-- Middle (e.g., title) -->
+                        <contentMiddle>
+                          <HBox class="header-container">
+                            <Link text="About Us"  press="onButtonPress" id="button1"/> 
+                            <Link text="User Detail" press="onButtonPress" id="button2"/> 
+                            <Link text="Access" press="onButtonPress" id="button3"/>
+                          </HBox>  
+                        </contentMiddle>
+                        
+                        <!-- Right side (e.g., settings and logout buttons) -->
+                        <contentRight>
+                            <Button 
+                              icon="sap-icon://log" 
+                              press="onLogoutPress"
+                              class="btn-header"
+                            />
+                        </contentRight>
+                    </Bar>
+                </customHeader>
+            </Page>
+        </pages>
+    </App>
+
+</mvc:View>

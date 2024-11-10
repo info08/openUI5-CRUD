@@ -1,0 +1,13 @@
+<mvc:View
+    controllerName="ui5.crud.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true">
+        <VBox class="custom-container">
+           <!-- header component  -->
+            <mvc:XMLView viewName="ui5.crud.view.components.Header" />
+            <!-- End -->
+            
+            <Text text="Hello UserDetails page"/>
+        </VBox>
+</mvc:View>

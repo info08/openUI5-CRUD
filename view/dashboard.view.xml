@@ -1,0 +1,60 @@
+<mvc:View
+    controllerName="ui5.crud.controller.Dashboard"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:custom="ui5.crud.customcontrols"
+    displayBlock="true">
+       <VBox class="custom-container">
+            <!-- header component  -->
+            <mvc:XMLView viewName="ui5.crud.view.components.Header" />
+            <!-- End -->
+
+           
+                  <HBox>
+                     <SearchField
+                      id="searchField"
+                      placeholder="Search..."
+                      liveChange="onSearch" 
+                     />
+                     <Button
+                      text="Add New Data"
+                     />
+                  </HBox>
+                     <!-- Custom Data Table -->
+                     <!-- <custom:CustomDataTable
+                       id="table"
+                      /> -->
+
+                    <!-- Table to display API data -->
+                   <Table id="apiTable" items="{/data}" visibleRowCount="1" height="400px">
+                      <columns>
+                        <Column>
+                            <Text text="ID"/>
+                        </Column>
+                        <Column>
+                            <Text text="Title"/>
+                        </Column>
+                        <Column>
+                            <Text text="Description"/>
+                        </Column>
+                        <Column>
+                             <Text text="Action"/>
+                        </Column>
+                        </columns>
+                        <items>
+                          <ColumnListItem>
+                              <cells>
+                                 <Text text="{id}"/>
+                                 <Text text="{title}"/>
+                                 <Text text="{body}"/>
+                                 <HBox>
+                                   <Button text="Edit"/>
+                                   <Button text="Delete"/>
+                                 </HBox>
+                              </cells>
+                           </ColumnListItem>
+                          </items>
+                     </Table>
+
+        </VBox>   
+</mvc:View>

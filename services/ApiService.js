@@ -1,0 +1,2 @@
+sap.ui.define(["jquery.sap.global"],function(jQuery){"use strict";return{makeAPICall:function(n,t,e){t=t||"GET";return new Promise(function(i,u){jQuery.ajax({url:n,method:t,data:e?JSON.stringify(e):null,contentType:"application/json",success:function(n){i(n)},error:function(n){u(n)}})})}}});
+//# sourceMappingURL=ApiService.js.map

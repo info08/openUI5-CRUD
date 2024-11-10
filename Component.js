@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/UIComponent","sap/ui/model/json/JSONModel","sap/ui/model/resource/ResourceModel"],(e,i,t)=>{"use strict";return e.extend("ui5.crud.Component",{metadata:{interfaces:["sap.ui.core.IAsyncContentCreation"],manifest:"json"},init(){e.prototype.init.apply(this,arguments);const i=new t({bundleName:"ui5.crud.i18n.i18n"});this.setModel(i,"i18n");this.getRouter().initialize()}})});
+//# sourceMappingURL=Component.js.map

@@ -1,0 +1,15 @@
+header div{
+    background-color: black !important;
+    color: white;
+}
+header .header-container div span,
+header .btn-header span{
+    color: white;
+    cursor: pointer;
+}
+header .header-container div{
+    padding: 5px;
+}
+.custom-container > div:first-child{
+    height: 55px !important;
+}
